@@ -1,0 +1,157 @@
+body{
+    margin: 0 auto;
+    background-color: #17251A;
+    color: #F5F5DC;
+    font-family: "Montserrat", sans-serif;
+}
+
+.encabezado{
+    text-align: center;
+    padding: 30px;
+    background-color: #243B25;
+    border-bottom: 5px solid #D4A017;
+}
+
+.logo{
+    width: 650px;
+    max-width: 90%;
+    text-align: center;
+}
+
+#sinopsis{
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navegacion{
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #101810;
+}
+
+#navegacion a{
+    color: #F4D03F;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+
+#navegacion a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.seccion{
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #243B25;
+    border: 2px solid #586B3B;
+}
+
+h2{
+    text-align: center;
+    color: #F4D03F;
+    font-family: "Instrument Serif", serif;
+    font-size: 40px;
+}
+
+h3{
+    color: #9ACD32;
+    font-size: 25px;
+}
+
+#sinopsis p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+.personajes{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.character{
+    width: 280px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1B2B1D;
+    border: 2px solid #586B3B;
+}
+
+.personaje h3{
+    color: #4E342E;
+    font-family: "Instrument Serif", Georgia, serif;
+}
+
+.character_img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #472d1b;
+    padding: 5px;
+    background-color: white;
+}
+
+.personaje p{
+    text-align: justify;
+    font-size: 15px;
+}
+
+a {
+    color: #F4D03F;
+}
+
+a:hover{
+    color: white;
+}
+
+.tabla-temporadas{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-temporadas th{
+    background-color: #9ACD32;
+    color: #17251A;
+    padding: 15px;
+}
+
+.tabla-temporadas td{
+    border: 1px solid #9ACD32;
+    padding: 15px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.curiosidades p{
+    white-space: pre-line;
+    line-height: 1.8;
+    text-align: justify;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.curiosidades a{
+    display: block;
+    text-align: center;
+}
+
+.referencias ul{
+    line-height: 2;
+}
+
+.referencias a{
+    text-decoration: none;
+}
+
+.referencias a:hover{
+    text-decoration: underline;
+}
+
+.volver a{
+    color: #F4D03F;
+    text-align: center;
+    display: block;
+}
