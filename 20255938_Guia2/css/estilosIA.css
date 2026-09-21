@@ -103,6 +103,7 @@ a{
 
         opacity:1;
 
+
     }
 
 }
@@ -485,7 +486,7 @@ h2{
 
     text-align:center;
 
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    transition:transform 1s ease, box-shadow 1s ease;
 
 }
 
@@ -519,7 +520,7 @@ h2{
 
 .tarjeta:hover{
 
-    transform:translateY(-10px) scale(1.02);
+    transform:translateY(-20px) scale(1.05);
 
     box-shadow:0 12px 24px rgba(0,0,0,0.18);
 
@@ -923,8 +924,4 @@ footer p{
 
     }
 
-}
-
-.tarjeta:hover{
-    background-color:red !important;
 }
