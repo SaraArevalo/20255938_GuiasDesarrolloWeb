@@ -924,3 +924,7 @@ footer p{
     }
 
 }
+
+.tarjeta:hover{
+    background-color:red !important;
+}
