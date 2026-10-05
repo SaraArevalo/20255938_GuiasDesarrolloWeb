@@ -1,0 +1,63 @@
+:root {
+    --azul-oscuro: #1e2533;
+    --azul: #495b7d;
+    --azul-claro: #dad6ca;
+    --fondo: #1d2836;
+    --blanco: #f0ecdd;
+    --texto: #333c50;
+}
+
+body {
+    margin: 0;
+    font-family: "Libre Bodoni", sans-serif;
+    background-color: var(--blanco);
+    text-align: center;
+}
+
+.titulo {
+    margin: 0;
+    padding: 2rem;
+    color: white;
+    background-color: var(--azul-oscuro);
+}
+
+.lista-guias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    margin: 3rem 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.guia {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+.guia:hover {
+    transform: translateY(-5px);
+}
+
+.enlace-guia {
+    display: block;
+
+    padding: 2rem 3rem;
+
+    color: var(--texto);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.enlace-guia:hover {
+    color: var(--azul);
+}

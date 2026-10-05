@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#diez_de_diamantes,
+#sota_de_diamantes,
+#reina_de_diamantes,
+#rey_de_diamantes,
+#as_de_diamantes {
+    position: absolute;
+}
+
+/* Resultado 1
+
+#diez_de_diamantes {
+    top: 80px;
+    left: 80px;
+    z-index: 1;
+}
+
+#sota_de_diamantes {
+    top: 85px;
+    left: 88px;
+    z-index: 2;
+}
+
+#reina_de_diamantes {
+    top: 90px;
+    left: 96px;
+    z-index: 3;
+}
+
+#rey_de_diamantes {
+    top: 95px;
+    left: 104px;
+    z-index: 4;
+}
+
+#as_de_diamantes {
+    top: 100px;
+    left: 112px;
+    z-index: 5;
+}
+
+*/
+
+/* Resultado 2 */
+
+#diez_de_diamantes {
+    top: 80px;
+    left: 80px;
+    z-index: 5;
+}
+
+#sota_de_diamantes {
+    top: 85px;
+    left: 88px;
+    z-index: 4;
+}
+
+#reina_de_diamantes {
+    top: 90px;
+    left: 96px;
+    z-index: 3;
+}
+
+#rey_de_diamantes {
+    top: 95px;
+    left: 104px;
+    z-index: 2;
+}
+
+#as_de_diamantes {
+    top: 100px;
+    left: 112px;
+    z-index: 1;
+}

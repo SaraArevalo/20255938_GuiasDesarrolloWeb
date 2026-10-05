@@ -1,0 +1,86 @@
+:root {
+    --azul-oscuro: #1e2533;
+    --azul: #495b7d;
+    --azul-claro: #dad6ca;
+    --fondo: #1d2836;
+    --blanco: #f0ecdd;
+    --texto: #333c50;
+}
+
+body {
+    margin: 0;
+    font-family: "Libre Bodoni", system-ui;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+.titulo {
+    margin: 0;
+    padding: 2.5rem 1rem;
+
+    text-align: center;
+    font-size: 2.5rem;
+
+    color: var(--blanco);
+    background-color: var(--azul-oscuro);
+}
+
+.contenido {
+    width: 90%;
+    max-width: 850px;
+
+    margin: 3rem 0 3rem 3rem;
+}
+
+.seccion {
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+
+    background-color: var(--blanco);
+
+    border-left: 5px solid var(--azul);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.seccion h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+
+    color: var(--azul-oscuro);
+}
+
+.lista {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lista li {
+    margin-bottom: 0.8rem;
+}
+
+.lista a {
+    display: block;
+
+    padding: 0.9rem 1rem;
+
+    color: var(--azul-oscuro);
+    background-color: var(--azul-claro);
+
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.lista a:hover {
+    transform: translateX(8px);
+
+    color: var(--blanco);
+    background-color: var(--azul);
+}
