@@ -1,0 +1,442 @@
+/* ============================================================
+   BAZAR ALBERT — Sistema visual: Amarillo + Negro + Gris Perla
+   Maquetación principal basada en CSS Grid.
+   ============================================================ */
+
+:root {
+    /* Colores */
+    --color-amarillo: #ffd931;
+    --color-negro: #000000;
+    --color-tinta: #231f20;
+    --color-perla: #c8cbcd;
+    --color-niebla: #a6a8aa;
+    --color-humo: #d6d6d6;
+    --color-blanco: #ffffff;
+
+    /* Tipografías */
+    --fuente-display: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+    --fuente-serif: 'Lora', 'Times New Roman', Times, serif;
+    --fuente-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* Radios */
+    --radio-tarjeta: 12px;
+    --radio-boton: 12px;
+    --radio-pill: 25px;
+    --radio-hero: 45px;
+
+    /* Espaciado */
+    --espacio-seccion: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-serif);
+    background-color: var(--color-perla);
+    color: var(--color-tinta);
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-display);
+    color: var(--color-negro);
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* ------------------------------
+   Utilidades de animación
+--------------------------------*/
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animar {
+    animation: aparecer 0.7s ease both;
+}
+
+.animar-retraso1 { animation-delay: 0.15s; }
+.animar-retraso2 { animation-delay: 0.30s; }
+.animar-retraso3 { animation-delay: 0.45s; }
+
+
+/* ------------------------------
+          HEADER (Flexbox)
+--------------------------------*/
+
+header {
+    background-color: var(--color-amarillo);
+    border-bottom: 2px solid var(--color-negro);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.contenedor-header {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.contenedor-header img {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-negro);
+    font-family: var(--fuente-sans);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    padding: 10px 16px;
+    border: 1px solid var(--color-negro);
+    border-radius: var(--radio-boton);
+    background-color: transparent;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover, nav a.activo {
+    background-color: var(--color-negro);
+    color: var(--color-amarillo);
+}
+
+
+/* ------------------------------------------------------------
+   MAQUETACIÓN PRINCIPAL CON CSS GRID (PÁGINA DE INICIO)
+------------------------------------------------------------ */
+
+.grid-layout-principal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espacio-seccion) 20px;
+}
+
+/* Grid Item 1: Hero ocupa las 12 columnas */
+.grid-item-hero {
+    grid-column: span 12;
+}
+
+/* Grid Item 2: Seccion de Categorías ocupa las 12 columnas */
+.grid-item-categorias {
+    grid-column: span 12;
+}
+
+/* Grid Item 3: Franja a Sucursales ocupa las 12 columnas */
+.grid-item-sucursales {
+    grid-column: span 12;
+}
+
+
+/* ------------------------------
+          HERO COMPONENT
+--------------------------------*/
+
+.hero {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-negro);
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+}
+
+.hero-texto {
+    width: 45%;
+}
+
+.hero-texto h1 {
+    font-size: 44px;
+    line-height: 0.95;
+    margin-top: 0;
+}
+
+.hero-texto p {
+    font-size: 17px;
+    color: var(--color-tinta);
+    max-width: 420px;
+}
+
+.hero img {
+    width: 55%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--radio-hero);
+    border: 1px solid var(--color-negro);
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    border: 1.5px solid var(--color-negro);
+    font-family: var(--fuente-sans);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 14px 26px;
+    border-radius: var(--radio-pill);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.2s ease, color 0.25s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-negro);
+    color: var(--color-amarillo);
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+          SECCIONES
+--------------------------------*/
+
+.seccion, .sucursales, .marcas {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    font-family: var(--fuente-sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-tinta);
+    margin-bottom: 35px;
+}
+
+
+/* ------------------------------
+       CATEGORÍAS
+--------------------------------*/
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-negro);
+    border-radius: var(--radio-tarjeta);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radio-tarjeta);
+    margin-top: 15px;
+}
+
+.tarjeta h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.tarjeta-cta {
+    text-align: center;
+    margin-top: 35px;
+}
+
+
+/* ------------------------------
+   FRANJA A SUCURSALES
+--------------------------------*/
+
+.franja-catalogo {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    border-radius: 30px;
+    padding: 45px 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.franja-catalogo h2 {
+    color: var(--color-amarillo);
+}
+
+.franja-catalogo p {
+    color: var(--color-humo);
+    max-width: 520px;
+    margin: 0 auto 25px;
+}
+
+.franja-catalogo .boton {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    border-color: var(--color-amarillo);
+}
+
+.franja-catalogo .boton:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+
+/* ------------------------------
+          FOOTER
+--------------------------------*/
+
+footer {
+    background-color: var(--color-negro);
+    color: var(--color-humo);
+    padding: 45px 20px 30px;
+    margin-top: 60px;
+}
+
+.footer-contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid var(--color-niebla);
+    padding-bottom: 25px;
+}
+
+footer h3 {
+    color: var(--color-amarillo);
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+footer p {
+    font-size: 14px;
+    max-width: 320px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--fuente-sans);
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--color-humo);
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--color-amarillo);
+}
+
+.footer-copy {
+    text-align: center;
+    font-family: var(--fuente-sans);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: var(--color-niebla);
+    margin-top: 20px;
+}
+
+
+/* ------------------------------
+       RESPONSIVE
+--------------------------------*/
+
+@media (max-width: 900px) {
+
+    /* El Grid principal se convierte a 1 sola columna */
+    .grid-layout-principal {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 20px auto;
+    }
+
+    .grid-item-hero,
+    .grid-item-categorias,
+    .grid-item-sucursales {
+        grid-column: span 1;
+    }
+
+    .contenedor-header {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .hero-texto,
+    .hero img {
+        width: 100%;
+    }
+
+    .hero img {
+        height: 220px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contenedor {
+        flex-direction: column;
+    }
+}
