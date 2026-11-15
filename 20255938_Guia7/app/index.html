@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundify | Descubre tu música</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">♫</span>
+            <h2>Soundify</h2>
+        </div>
+        <p>Tu espacio para descubrir música</p>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">EXPLORE YOUR SOUND</p>
+            <h1>Encuentra tu próxima canción favorita.</h1>
+            <p class="description">
+                Busca canciones, descubre nuevos artistas
+                y explora sus álbumes favoritos.
+            </p>
+
+            <form id="formBusqueda" class="search-form">
+                <input
+                    type="search"
+                    id="inputBusqueda"
+                    placeholder="Busca una canción o artista..."
+                    required
+                >
+                <button type="submit" id="btnBuscar">
+                    Buscar
+                </button>
+            </form>
+
+            <p id="mensajeEstado" class="mensaje" role="status">
+                Escribe una canción para comenzar a explorar.
+            </p>
+        </section>
+
+        <section class="resultados-section">
+            <div class="section-header">
+                <h2>Resultados de búsqueda</h2>
+                <span id="contadorResultados">0 canciones</span>
+            </div>
+
+            <div id="resultados" class="resultados-grid"></div>
+        </section>
+
+        <section id="seccionDetalle" class="detalle-section" hidden>
+
+            <div class="section-header">
+                <h2>Detalles de la canción</h2>
+                <button type="button" id="btnCerrarDetalle">
+                    Cerrar
+                </button>
+            </div>
+
+            <div id="detalleCancion" class="detalle-cancion"></div>
+
+            <h3>Canciones del mismo álbum</h3>
+
+            <div id="cancionesAlbum" class="canciones-album"></div>
+
+            <p id="mensajeDetalle" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Soundify © 2026 | Descubre música a tu manera ♫</p>
+    </footer>
+
+</body>
+</html>
